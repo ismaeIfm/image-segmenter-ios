@@ -31,7 +31,7 @@ extension UIImage {
             return nil
         }
         
-        let shape = output.ResizeBilinear_2__0.shape
+        let shape = output.ResizeBilinear_3__0.shape
         let (d,w,h) = (Int(truncating: shape[0]), Int(truncating: shape[1]), Int(truncating: shape[2]))
         let pageSize = w*h
         var res:Array<Int> = []
@@ -59,7 +59,7 @@ extension UIImage {
                 let pageOffset = i * w + j
                 for k in 0..<d {
                     let padding = pageIndexs[k]
-                    itemArr.append(Int(truncating: output.ResizeBilinear_2__0[padding + pageOffset]))
+                    itemArr.append(Int(truncating: output.ResizeBilinear_3__0[padding + pageOffset]))
                 }
                 /*
                 types map  [
